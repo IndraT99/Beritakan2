@@ -1,0 +1,3 @@
+## 2024-05-19 - Accessible Password Toggle
+**Learning:** Found a recurring pattern where password visibility toggle icons (`.change-type` spans with FontAwesome eyes) were inaccessible to keyboard users and screen readers.
+**Action:** Always add `tabindex="0"`, `role="button"`, and `aria-label="Toggle password visibility"` to such elements, and ensure the associated click event listener is expanded to also handle `keypress` (Enter and Space keys) to ensure full keyboard operability.

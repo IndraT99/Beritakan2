@@ -15,21 +15,24 @@
                 <div class="mb-5 position-relative">
                     {{ Form::label('current_password',__('messages.user.current_password').':', ['class' => 'form-label required']) }}
                     {{Form::password('current_password',['class' => 'form-control' ,'placeholder' => __('messages.user.current_password'), 'autocomplete'=> 'off'])}}
-                    <span class="position-absolute d-flex align-items-center top-0 mt-7 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type">
+                    <span class="position-absolute d-flex align-items-center top-0 mt-7 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type"
+                          tabindex="0" role="button" aria-label="Toggle password visibility">
                                 <i class="fas fa-eye-slash"></i>
                             </span>
                 </div>
                 <div class="mb-5 position-relative">
                     {{ Form::label('new_password',__('messages.user.new_password').':', ['class' => 'form-label required']) }}
                     {{Form::password('new_password',['class' => 'form-control','placeholder' => __('messages.user.new_password'), 'autocomplete'=> 'off'])}}
-                    <span class="position-absolute d-flex align-items-center top-0 mt-7 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type">
+                    <span class="position-absolute d-flex align-items-center top-0 mt-7 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type"
+                          tabindex="0" role="button" aria-label="Toggle password visibility">
                                 <i class="fas fa-eye-slash"></i>
                             </span>
                 </div>
                 <div class="position-relative">
                     {{ Form::label('confirm_password',__('messages.user.confirm_password').':', ['class' => 'form-label required']) }}
                     {{Form::password('confirm_password',['class' => 'form-control','placeholder' => __('messages.user.confirm_password'), 'autocomplete'=> 'off'])}}
-                    <span class="position-absolute d-flex align-items-center top-0 mt-7 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type">
+                    <span class="position-absolute d-flex align-items-center top-0 mt-7 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type"
+                          tabindex="0" role="button" aria-label="Toggle password visibility">
                                 <i class="fas fa-eye-slash"></i>
                             </span>
                 </div>

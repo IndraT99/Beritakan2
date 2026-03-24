@@ -49,7 +49,8 @@
                     <input class="form-control"
                            type="password" placeholder="{{__('messages.staff.password')}}" name="password"
                            autocomplete="off">
-                    <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type">
+                    <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type"
+                          tabindex="0" role="button" aria-label="Toggle password visibility">
                                 <i class="fas fa-eye-slash"></i>
                             </span>
                 </div>
@@ -63,7 +64,8 @@
                     <input class="form-control" type="password" placeholder="{{__('messages.user.confirm_password')}}"
                            name="password_confirmation"
                            autocomplete="off">
-                    <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type">
+                    <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type"
+                          tabindex="0" role="button" aria-label="Toggle password visibility">
                                 <i class="fas fa-eye-slash"></i>
                             </span>
                 </div>
