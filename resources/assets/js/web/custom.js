@@ -405,7 +405,13 @@ $(document).on('click','.set > a', function () {
         $(this).siblings('.content').slideDown(200)
     }
 })
-$(document).on('click', '.change-type', function (e) {
+$(document).on('click keypress', '.change-type', function (e) {
+    if (e.type === 'keypress' && e.which !== 13 && e.which !== 32) {
+        return;
+    }
+    if (e.type === 'keypress') {
+        e.preventDefault();
+    }
     let inputField = $(this).siblings()
     let oldType = inputField.attr('type')
 

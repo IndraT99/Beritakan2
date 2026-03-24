@@ -37,7 +37,8 @@
                 </div>
                 <input type="password" class="form-control" id="formInputPassword"
                        placeholder="{{ __('auth.password') }}" name="password" required autocomplete="off">
-                <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 mt-7 me-4 input-icon input-password-hide  cursor-pointer change-type">
+                <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 mt-7 me-4 input-icon input-password-hide  cursor-pointer change-type"
+                      tabindex="0" role="button" aria-label="Toggle password visibility">
                        <i class="fas fa-eye-slash"></i>
                  </span>
             </div>

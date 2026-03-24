@@ -67,7 +67,8 @@
                             <input type="password" name="password" class="form-control" id="password"
                                    placeholder=" {{ __('messages.staff.password') }}" aria-describedby="password"
                                    required aria-label="Password" data-toggle="password">
-                            <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type">
+                            <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type"
+                                  tabindex="0" role="button" aria-label="Toggle password visibility">
                                 <i class="fas fa-eye-slash"></i>
                             </span>
                         </div>
@@ -81,7 +82,8 @@
                                     placeholder=" {{ __('messages.staff.confirm_password') }}" id="password_confirmation"
                                     aria-describedby="confirmPassword" required aria-label="Password"
                                     data-toggle="password">
-                                <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type">
+                                <span class="position-absolute d-flex align-items-center top-0 bottom-0 end-0 me-4 input-icon input-password-hide cursor-pointer text-gray-600 change-type"
+                                      tabindex="0" role="button" aria-label="Toggle password visibility">
                                     <i class="fas fa-eye-slash"></i>
                                 </span>
                             </div>
