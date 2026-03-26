@@ -95,7 +95,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
+                        <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button" aria-label="Toggle search"
                                 id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
                         </button>
@@ -105,14 +105,14 @@
                                     <input type="text" name="search" id="search" placeholder="Search..."
                                            class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                            value="">
-                                    <button type="submit" class="search-submit custom-submit search-input">
+                                    <button type="submit" class="search-submit custom-submit search-input" aria-label="Search">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
                             </form>
                         </div>
                         <div class="offcanvas-toggle d-lg-none d-block">
-                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
+                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle" aria-label="Toggle menu"
                                aria-controls="offcanvasToggle">
                                 <i class="fa-solid fa-bars "></i>
                             </a>
@@ -120,7 +120,7 @@
                                  id="offcanvasToggle" aria-labelledby="offcanvasToggleLabel">
                                 <div class="offcanvas-content m-0">
                                     <div class="text-end">
-                                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
+                                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle" aria-label="Toggle menu"
                                            aria-controls="offcanvasToggle">
                                             <i class="fa fa-close text-black fs-5 m-2 me-3"></i>
                                         </a>
@@ -488,7 +488,7 @@
             </div>
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
-                    <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
+                    <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button" aria-label="Toggle search"
                             id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
                     </button>
@@ -498,13 +498,13 @@
                                 <input type="text" name="search" id="search" placeholder="{{__('messages.search')}}"
                                        class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                        value="">
-                                <button type="submit" class="search-submit custom-submit search-input">
+                                <button type="submit" class="search-submit custom-submit search-input" aria-label="Search">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
                         </form>
                     </div>
-                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-label="Toggle menu"
                        aria-controls="offcanvasExample">
                         <i class="fa-solid fa-bars  fs-20"></i>
                     </a>
