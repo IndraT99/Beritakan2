@@ -734,6 +734,7 @@
                                 <button type="submit"
                                         class="button btn-primary d-none d-sm-block position-absolute fs-14 subscribe-btn">{{ __('messages.common.subscribe') }}</button>
                                 <button type="submit"
+                                        aria-label="{{ __('messages.common.subscribe') }}"
                                         class="button btn-primary d-flex align-items-center justify-content-center px-3 d-sm-none position-absolute subscribe-btn">
                                     <i class="fa-solid fa-paper-plane"></i>
                                 </button>
