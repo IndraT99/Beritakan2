@@ -49,7 +49,7 @@
 {{--                                                <img data-src="{{ $news['post_image'] }}" src="{{ asset('front_web/images/bg-process.png') }}"  alt="" class="w-100 h-100 w-300px lazy">--}}
                                                 @if($news['post_types'] == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                     <button class="common-music-icon sidebar-music-icon"
-                                                            type="button">
+                                            type="button" aria-label="Play audio">
                                                         <i class="icon fa-solid fa-music text-white"></i>
                                                     </button>
                                                     <img src="{{ $news['post_image'] }}" alt=""
@@ -60,7 +60,7 @@
                                                         $thumbImage = !empty($news['post_video']) && !empty($news['post_video']['uploaded_thumb']) ? $news['post_video']['uploaded_thumb'] : asset('front_web/images/default.jpg')
                                                     @endphp
                                                     <button class="common-music-icon sidebar-music-icon"
-                                                            type="button">
+                                                            type="button" aria-label="Play video">
                                                         <i class="icon fa-solid fa-play text-white"></i>
                                                     </button>
                                                     <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}" alt=""
@@ -122,7 +122,7 @@
 {{--                                            <img data-src="{{ $recommendedPost['post_image'] }}" alt="" src="{{ asset('front_web/images/bg-process.png') }}" class="w-100 h-100 w-300px lazy">--}}
                                             @if($recommendedPost['post_types'] == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                 <button class="common-music-icon sidebar-music-icon"
-                                                        type="button">
+                                                        type="button" aria-label="Play audio">
                                                     <i class="icon fa-solid fa-music text-white"></i>
                                                 </button>
                                                 <img src="{{ $recommendedPost['post_image'] }}" alt=""
@@ -133,7 +133,7 @@
                                                     $thumbImage = !empty($recommendedPost->postVideo) && !empty($recommendedPost->postVideo->uploaded_thumb) ? $recommendedPost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                 @endphp
                                                 <button class="common-music-icon sidebar-music-icon"
-                                                        type="button">
+                                            type="button" aria-label="Play video">
                                                     <i class="icon fa-solid fa-play text-white"></i>
                                                 </button>
                                                 <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}" alt=""

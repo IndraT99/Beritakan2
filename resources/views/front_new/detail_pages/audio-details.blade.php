@@ -324,7 +324,7 @@
                                                         <a href="{{ route('detailPage',$previousPost->slug) }}">
                                                             @if($previousPost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                 <button class="common-music-icon sidebar-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play audio">
                                                                     <i class="icon fa-solid fa-music text-white"></i>
                                                                 </button>
                                                                 <img src="{{ $previousPost->post_image }}" alt=""
@@ -335,7 +335,7 @@
                                                                     $thumbImage = !empty($previousPost->postVideo) && !empty($previousPost->postVideo->uploaded_thumb) ? $previousPost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                                 @endphp
                                                                 <button class="common-music-icon sidebar-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play video">
                                                                     <i class="icon fa-solid fa-play text-white"></i>
                                                                 </button>
                                                                 <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage) }}" alt=""
@@ -366,7 +366,7 @@
                                                         <a href="{{ route('detailPage',$nextPost->slug) }}">
                                                             @if($nextPost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                 <button class="common-music-icon sidebar-music-icon"
-                                                                        type="button">
+                                                                            type="button" aria-label="Play audio">
                                                                     <i class="icon fa-solid fa-music text-white "></i>
                                                                 </button>
                                                                 <img src="{{ $nextPost->post_image }}"
@@ -377,7 +377,7 @@
                                                                     $thumbImage = !empty($nextPost->postVideo) && !empty($nextPost->postVideo->uploaded_thumb) ? $nextPost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                                 @endphp
                                                                 <button class="common-music-icon sidebar-music-icon"
-                                                                        type="button">
+                                                                            type="button" aria-label="Play video">
                                                                     <i class="icon fa-solid fa-play text-white"></i>
                                                                 </button>
                                                                 <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage) }}"
@@ -423,14 +423,14 @@
                                                             <a href="{{ route('detailPage',$relatedPost->slug) }}">
                                                                 @if($relatedPost['post_types'] == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                     <button class="common-music-icon sidebar-music-icon"
-                                                                            type="button">
+                                                                        type="button" aria-label="Play audio">
                                                                         <i class="icon fa-solid fa-music text-white"></i>
                                                                     </button>
                                                                     <img src="{{ $relatedPost['post_image'] }}" alt=""
                                                                          class="w-100 h-100">
                                                                 @elseif($relatedPost['post_types'] == \App\Models\Post::VIDEO_TYPE_ACTIVE)
                                                                     <button class="common-music-icon sidebar-music-icon"
-                                                                            type="button">
+                                                                            type="button" aria-label="Play video">
                                                                         <i class="icon fa-solid fa-play text-white"></i>
                                                                     </button>
                                                                     <img src="{{ $relatedPost['post_image'] }}" alt=""
