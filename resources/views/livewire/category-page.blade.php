@@ -7,7 +7,7 @@
                     <a href="{{route('detailPage',$post->slug)}}">
                         @if($post->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                             <button class="common-music-icon all-posts-music-icon"
-                                    type="button">
+                                            type="button" aria-label="Play audio">
                                 <i class="icon fa-solid fa-music text-white"></i>
                             </button>
                             <img src="{{$post->post_image}}" class="w-100 h-100" alt="">
@@ -17,7 +17,7 @@
                                 $thumbImage = !empty($post->postVideo) && !empty($post->postVideo->uploaded_thumb) ? $post->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                             @endphp
                             <button class="common-music-icon all-posts-music-icon"
-                                    type="button">
+                                            type="button" aria-label="Play video">
                                 <i class="icon fa-solid fa-play text-white"></i>
                             </button>
                             <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage) }}" class="w-100 h-100" alt="">

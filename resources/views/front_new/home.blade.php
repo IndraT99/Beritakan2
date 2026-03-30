@@ -37,7 +37,7 @@
                                         <a href="{{ route('detailPage',$sliderPost->slug )}}">
 {{--                                            <img data-src="{{ $sliderPost->post_image }}" src="{{ asset('front_web/images/bg-process.png') }}" class="w-100 h-100 lazy" alt=""/>--}}
                                             @if($sliderPost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
-                                                <button class="common-music-icon slider-music-icon" type="button">
+                                                <button class="common-music-icon slider-music-icon" type="button" aria-label="Play audio">
                                                         <i class="icon fa-solid fa-music text-white"></i>
                                                 </button>
                                                 <img src="{{ $sliderPost->post_image }}" class="w-100 h-100" alt=""/>
@@ -47,7 +47,7 @@
                                                     $thumbImage = !empty($sliderPost->postVideo) && !empty($sliderPost->postVideo->uploaded_thumb) ? $sliderPost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                 @endphp
                                                 <button class="common-music-icon slider-music-icon"
-                                                        type="button">
+                                                        type="button" aria-label="Play video">
                                                     <i class="icon fa-solid fa-play text-white"></i>
                                                 </button>
                                                 <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}" class="w-100 h-100" alt=""/>
@@ -71,11 +71,11 @@
                                 @endforeach
                             </div>
                             <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev" aria-label="Previous slide">
                                 <i class="icon fa-solid fa-arrow-left text-white"></i>
                             </button>
                             <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next" aria-label="Next slide">
                                 <i class="icon fa-solid fa-arrow-right text-white"></i>
                             </button>
                         </div>
@@ -89,7 +89,7 @@
                                             <a href="{{route('detailPage',$row->slug)}}">
 {{--                                                <img data-src="{{ $row->post_image }}" src="{{ asset('front_web/images/bg-process.png') }}" alt="" class="w-100 h-100 lazy">--}}
                                                 @if($row->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
-                                                    <button class="common-music-icon small-music-icon" type="button">
+                                                    <button class="common-music-icon small-music-icon" type="button" aria-label="Play audio">
                                                         <i class="icon fa-solid fa-music text-white"></i>
                                                         </button>
                                                     <img src="{{ $row->post_image }}" class="w-100 h-100" alt=""/>
@@ -99,7 +99,7 @@
                                                         $thumbImage = !empty($row->postVideo) && !empty($row->postVideo->uploaded_thumb) ? $row->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                     @endphp
                                                     <button class="common-music-icon small-music-icon"
-                                                            type="button">
+                                                            type="button" aria-label="Play video">
                                                         <i class="icon fa-solid fa-play text-white"></i>
                                                     </button>
                                                     <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}" class="w-100 h-100" alt=""/>
@@ -237,7 +237,7 @@
 {{--                                                                            $middlePost->post_image :" /"}}" src="{{ asset('front_web/images/bg-process.png') }}" alt="" class="w-100 h-100 lazy" />--}}
                                                                 @if($middlePost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                     <button class="common-music-icon tab-music-icon"
-                                                                            type="button">
+                                                                            type="button" aria-label="Play audio">
                                                                         <i class="icon fa-solid fa-music text-white"></i>
                                                                     </button>
                                                                     <img src="{{($middlePost->post_image) ?
@@ -249,7 +249,7 @@
                                                                         $thumbImage = !empty($middlePost->postVideo) && !empty($middlePost->postVideo->uploaded_thumb) ? $middlePost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                                     @endphp
                                                                     <button class="common-music-icon tab-music-icon"
-                                                                            type="button">
+                                                                            type="button" aria-label="Play video">
                                                                         <i class="icon fa-solid fa-play text-white"></i>
                                                                     </button>
                                                                     <img src="{{(!empty($thumbUrl) ? $thumbUrl : $thumbImage) }}"
@@ -282,7 +282,7 @@
 {{--                                                                             class="w-100 h-100 lazy">--}}
                                                                         @if($middlePost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                             <button class="common-music-icon small-music-icon"
-                                                                                    type="button">
+                                                                                    type="button" aria-label="Play audio">
                                                                                 <i class="icon fa-solid fa-music text-white "></i>
                                                                             </button>
                                                                             <img src="{{$posts->post_image}}"
@@ -293,7 +293,7 @@
                                                                                 $thumbImage = !empty($middlePost->postVideo) && !empty($middlePost->postVideo->uploaded_thumb) ? $middlePost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                                             @endphp
                                                                             <button class="common-music-icon small-music-icon"
-                                                                                    type="button">
+                                                                                    type="button" aria-label="Play video">
                                                                                 <i class="icon fa-solid fa-play text-white "></i>
                                                                             </button>
                                                                             <img src="{{(!empty($thumbUrl) ? $thumbUrl : $thumbImage) }}"
@@ -376,7 +376,7 @@
 {{--                                                                 class="w-100 h-100 lazy"/>--}}
                                                             @if($categoryPost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                 <button class="common-music-icon medium-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play audio">
                                                                     <i class="icon fa-solid fa-music text-white"></i>
                                                                 </button>
                                                                 <img src="{{$categoryPost->post_image}}"
@@ -387,7 +387,7 @@
                                                                     $thumbImage = !empty($categoryPost->postVideo) && !empty($categoryPost->postVideo->uploaded_thumb) ? $categoryPost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                                 @endphp
                                                                 <button class="common-music-icon medium-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play video">
                                                                     <i class="icon fa-solid fa-play text-white "></i>
                                                                 </button>
                                                                 <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}"
@@ -475,7 +475,7 @@
 {{--                                                            <img data-src="{{$latestPost->post_image}}" alt="" src="{{ asset('front_web/images/bg-process.png') }}" class="w-100 h-100 lazy">--}}
                                                             @if($latestPost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                 <button class="common-music-icon all-posts-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play audio">
                                                                     <i class="icon fa-solid fa-music text-white "></i>
                                                                 </button>
                                                                 <img src="{{$latestPost->post_image}}"
@@ -486,7 +486,7 @@
                                                                     $thumbImage = !empty($latestPost->postVideo) && !empty($latestPost->postVideo->uploaded_thumb) ? $latestPost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                                 @endphp
                                                                 <button class="common-music-icon all-posts-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play video">
                                                                     <i class="icon fa-solid fa-play text-white "></i>
                                                                 </button>
                                                                 <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}"
@@ -594,7 +594,7 @@
 {{--                                                            <img data-src="{{$posts->post_image}}" alt="" src="{{ asset('front_web/images/bg-process.png') }}" class="w-100 h-100 lazy">--}}
                                                             @if($posts->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                 <button class="common-music-icon small-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play audio">
                                                                     <i class="icon fa-solid fa-music text-white "></i>
                                                                 </button>
                                                                 <img src="{{$posts->post_image}}" class="w-100 h-100"
@@ -605,7 +605,7 @@
                                                                     $thumbImage = !empty($posts->postVideo) && !empty($posts->postVideo->uploaded_thumb) ? $posts->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                                 @endphp
                                                                 <button class="common-music-icon small-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play video">
                                                                     <i class="icon fa-solid fa-play text-white "></i>
                                                                 </button>
                                                                 <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}" class="w-100 h-100"
@@ -635,7 +635,7 @@
 {{--                                                                            $middleFeaturePost->post_image :" /"}}" alt="" src="{{ asset('front_web/images/bg-process.png') }}" class="w-100 h-100 lazy" />--}}
                                                     @if($middleFeaturePost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                         <button class="common-music-icon tab-music-icon"
-                                                                type="button">
+                                                                type="button" aria-label="Play audio">
                                                             <i class="icon fa-solid fa-music text-white "></i>
                                                         </button>
                                                         <img src="{{($middleFeaturePost->post_image) ?
@@ -647,7 +647,7 @@
                                                             $thumbImage = !empty($middleFeaturePost->postVideo) && !empty($middleFeaturePost->postVideo->uploaded_thumb) ? $middleFeaturePost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                         @endphp
                                                         <button class="common-music-icon tab-music-icon"
-                                                                type="button">
+                                                                type="button" aria-label="Play video">
                                                             <i class="icon fa-solid fa-play text-white "></i>
                                                         </button>
                                                         <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}"
@@ -679,7 +679,7 @@
 {{--                                                            <img data-src="{{$posts->post_image}}" alt="" src="{{ asset('front_web/images/bg-process.png') }}" class="w-100 h-100 lazy">--}}
                                                             @if($posts->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                                                 <button class="common-music-icon small-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play audio">
                                                                     <i class="icon fa-solid fa-music text-white "></i>
                                                                 </button>
                                                                 <img src="{{$posts->post_image}}" class="w-100 h-100"
@@ -690,7 +690,7 @@
                                                                     $thumbImage = !empty($posts->postVideo) && !empty($posts->postVideo->uploaded_thumb) ? $posts->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                                                 @endphp
                                                                 <button class="common-music-icon small-music-icon"
-                                                                        type="button">
+                                                                        type="button" aria-label="Play video">
                                                                     <i class="icon fa-solid fa-play text-white "></i>
                                                                 </button>
                                                                 <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}" class="w-100 h-100"

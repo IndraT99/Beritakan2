@@ -32,7 +32,7 @@
                                 <a href="{{route('detailPage',['data' => $recentPost->slug])}}">
                                     @if($recentPost->post_types == \App\Models\Post::AUDIO_TYPE_ACTIVE)
                                         <button class="common-music-icon sidebar-music-icon"
-                                                type="button">
+                                                type="button" aria-label="Play audio">
                                             <i class="icon fa-solid fa-music text-white"></i>
                                         </button>
                                         <img src="{{$recentPost->post_image}}" alt="" class="w-100 h-100">
@@ -42,7 +42,7 @@
                                             $thumbImage = !empty($recentPost->postVideo) && !empty($recentPost->postVideo->uploaded_thumb) ? $recentPost->postVideo->uploaded_thumb : asset('front_web/images/default.jpg')
                                         @endphp
                                         <button class="common-music-icon sidebar-music-icon"
-                                                type="button">
+                                                type="button" aria-label="Play video">
                                             <i class="icon fa-solid fa-play text-white"></i>
                                         </button>
                                         <img src="{{ (!empty($thumbUrl) ? $thumbUrl : $thumbImage)  }}" alt="" class="w-100 h-100">
