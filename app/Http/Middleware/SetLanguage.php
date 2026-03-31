@@ -22,11 +22,14 @@ class SetLanguage
     {
         $langIdLanguage = empty(Session::get('frontLanguageChange'));
         if ($langIdLanguage) {
-                $langId = getSettingValue()['front_language'];
-                App::setLocale(Language::find($langId)->iso_code);
+                $settings = getSettingValue();
+                $langId = $settings['front_language'] ?? 1;
+                $language = Language::find($langId);
+                App::setLocale($language ? $language->iso_code : 'en');
         } else {
             $langId = Session::get('frontLanguageChange');
-            App::setLocale(Language::find($langId)->iso_code);
+            $language = Language::find($langId);
+            App::setLocale($language ? $language->iso_code : 'en');
         }
 
         return $next($request);
