@@ -22,7 +22,8 @@
                                 <button type="button" class="btn btn-primary ms-3 w-25" id="OpenAiCall"
                                     data-role="{{ getLoginUserRole() }}">{{ __('messages.ai.generate_content') }}</button>
                                 <button class="btn btn-primary ms-3 " type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                    aria-label="{{ __('messages.ai.ai_filter') }}"> <i
                                         class="fa-solid fa-bars"></i></button>
                             </div>
                         </div>
