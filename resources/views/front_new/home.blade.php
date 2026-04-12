@@ -71,12 +71,12 @@
                                 @endforeach
                             </div>
                             <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <i class="icon fa-solid fa-arrow-left text-white"></i>
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev" aria-label="{{ __('pagination.previous') }}">
+                                <i class="icon fa-solid fa-arrow-left text-white" aria-hidden="true"></i>
                             </button>
                             <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <i class="icon fa-solid fa-arrow-right text-white"></i>
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next" aria-label="{{ __('pagination.next') }}">
+                                <i class="icon fa-solid fa-arrow-right text-white" aria-hidden="true"></i>
                             </button>
                         </div>
                     </div>
