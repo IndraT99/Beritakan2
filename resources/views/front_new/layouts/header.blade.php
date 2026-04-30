@@ -96,7 +96,7 @@
                             </ul>
                         </div>
                         <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
                             <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
                         </button>
                         <div class="dropdown-menu mobile-search">
@@ -105,7 +105,7 @@
                                     <input type="text" name="search" id="search" placeholder="Search..."
                                            class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                            value="">
-                                    <button type="submit" class="search-submit custom-submit search-input">
+                                    <button type="submit" class="search-submit custom-submit search-input" aria-label="{{ __('messages.search') }}">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
@@ -489,7 +489,7 @@
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
                     <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
                         <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
                     </button>
                     <div class="dropdown-menu">
@@ -498,7 +498,7 @@
                                 <input type="text" name="search" id="search" placeholder="{{__('messages.search')}}"
                                        class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                        value="">
-                                <button type="submit" class="search-submit custom-submit search-input">
+                                <button type="submit" class="search-submit custom-submit search-input" aria-label="{{ __('messages.search') }}">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
