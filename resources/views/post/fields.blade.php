@@ -571,7 +571,7 @@
                             ">
                                 {{ $postGallery->gallery_title ?? null }}
                             </button>
-                            <button type="button" title="Delete"
+                            <button type="button" title="{{ __('messages.delete') }}" aria-label="{{ __('messages.delete') }}"
                                 class="btn px-2 text-danger fs-2 delete-gallery-item
                                                 {{ $post->postGalleries->count() <= 1 ? 'd-none' : '' }}">
                                 <i class="fa-solid fa-trash"></i>
@@ -751,7 +751,7 @@
                                 {{ $sortedList->sort_list_title ?? null }}
                             </button>
 
-                            <button type="button" title="Delete"
+                            <button type="button" title="{{ __('messages.delete') }}" aria-label="{{ __('messages.delete') }}"
                                 class="btn px-2 text-danger fs-2 delete-sort_list-item
                                                 {{ $post->postSortLists->count() <= 1 ? 'd-none' : '' }}">
                                 <i class="fa-solid fa-trash"></i>

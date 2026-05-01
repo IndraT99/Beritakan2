@@ -25,7 +25,7 @@ $style = 'cursor: default !important;';
                         aria-controls="kt_accordion_{{:i}}_body_{{:i}}" <?php echo $inStyle ?>="<?php echo $style ?>" id="accordion_button_{{:i}}">
 <!--                    {{:i}}-->
                 </button>
-                <a href="javascript:void(0)"  title="{{ __('messages.delete') }}"
+                <a href="javascript:void(0)"  title="{{ __('messages.delete') }}" aria-label="{{ __('messages.delete') }}"
            class="btn px-2 text-danger fs-2 delete-gallery-item">
             <i class="fa-solid fa-trash"></i>
         </a>
@@ -113,7 +113,7 @@ $style = 'cursor: default !important;';
 <!--                    {{:i}}-->
                 </button>
                 
-                        <a href="javascript:void(0)" data-id="{{$row['id']}}" title="{{ __('messages.delete') }}"
+                        <a href="javascript:void(0)" data-id="{{$row['id']}}" title="{{ __('messages.delete') }}" aria-label="{{ __('messages.delete') }}"
            class="btn px-2 text-danger fs-2 delete-sort_list-item">
             <i class="fa-solid fa-trash"></i>
         </a>
