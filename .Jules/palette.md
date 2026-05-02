@@ -1,0 +1,3 @@
+## 2024-06-25 - Add ARIA Labels to Dashboard Layout Navigation Controls
+**Learning:** The dashboard layouts (`resources/views/layouts/header.blade.php` and `resources/views/layouts/sidebar.blade.php`) often rely on FontAwesome icons inside button and link elements that have no visible text. This results in inaccessible controls for screen reader users as they miss critical navigation and display functionality (e.g., toggling the sidebar, fullscreen mode, dark mode).
+**Action:** Implemented `aria-label` attributes on these icon-only interactive elements to provide screen reader context. Always ensure `aria-label` is applied to `<button>` or `<a>` elements containing only `<i>` icons in structural layout views.
