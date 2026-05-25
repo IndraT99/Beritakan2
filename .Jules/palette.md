@@ -1,0 +1,3 @@
+## 2026-05-25 - Adding ARIA labels for icon-only buttons
+**Learning:** Found several nested anchor tags with interactive elements in Blade files where an icon button wrapper was used, preventing screen readers from accessing those elements properly without aria-labels. It's common to accidentally trap focus stops here by having a button wrapper containing an empty or icon-only anchor tag.
+**Action:** When working with header components or other navigation bars in this app, verify that dropdown and icon-only buttons use localized ARIA labels and ensure nested empty links use `tabindex="-1"` and `aria-hidden="true"` to avoid double focus stops.
