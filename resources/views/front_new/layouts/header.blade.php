@@ -96,8 +96,8 @@
                             </ul>
                         </div>
                         <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                            <a href="javascript:void(0)" aria-hidden="true" tabindex="-1"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
                         </button>
                         <div class="dropdown-menu mobile-search">
                             <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -113,7 +113,7 @@
                         </div>
                         <div class="offcanvas-toggle d-lg-none d-block">
                             <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                               aria-controls="offcanvasToggle">
+                               aria-controls="offcanvasToggle" aria-label="{{ __('messages.menu.menu') }}">
                                 <i class="fa-solid fa-bars "></i>
                             </a>
                             <div class="offcanvas-wrapper offcanvas-wrapper-start" tabindex="-1"
@@ -121,7 +121,7 @@
                                 <div class="offcanvas-content m-0">
                                     <div class="text-end">
                                         <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                                           aria-controls="offcanvasToggle">
+                                           aria-controls="offcanvasToggle" aria-label="{{ __('messages.common.close') }}">
                                             <i class="fa fa-close text-black fs-5 m-2 me-3"></i>
                                         </a>
                                     </div>
@@ -202,7 +202,7 @@
                                                class="fs-14 fw-6 {{ 'Pages' == ucfirst(last(request()->segments())) ? 'active': '' }}">
                                                 {{ __('messages.pages') }}
                                             </a>
-                                            <a href="#" class="p-0" data-turbo="false><i class=" fa fa-plus"></i></a>
+                                            <a href="#" class="p-0" data-turbo="false" aria-label="{{ __('messages.menu.menu') }}"><i class=" fa fa-plus"></i></a>
                                         @endif
                                         <div class="content">
                                             @foreach($nav['pages'] as $page)
@@ -220,7 +220,7 @@
                                             <a href="javascript:void(0)" class="fs-14 fw-6">
                                                 {{ getLogInUser()->last_name }}
                                             </a>
-                                            <a href="#" class="p-0" data-turbo="false><i class=" fa fa-plus"></i></a>
+                                            <a href="#" class="p-0" data-turbo="false" aria-label="{{ __('messages.menu.menu') }}"><i class=" fa fa-plus"></i></a>
                                             <div class="content">
                                                 <li>
                                                     <a href="{{ route('admin.dashboard') }}" class="fs-14 fw-6"
@@ -489,8 +489,8 @@
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
                     <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                        <a href="javascript:void(0)" aria-hidden="true" tabindex="-1"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
                     </button>
                     <div class="dropdown-menu">
                         <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
