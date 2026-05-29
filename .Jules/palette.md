@@ -1,0 +1,3 @@
+## 2024-05-17 - Accessible Toggles with Localization
+**Learning:** Hardcoded strings in `aria-label`s fail localization checks and break the experience for users in other languages. Additionally, when nesting an interactive `<a>` inside a `<button>`, screen readers may announce both elements, creating duplicate focus stops.
+**Action:** Use existing Blade translation keys (e.g., `aria-label="{{ __('messages.search') }}"`) for accessible text. For nested toggles like `<button><a ...><i></i></a></button>`, apply `aria-label` to the parent button and `aria-hidden="true" tabindex="-1"` to the inner anchor/icon to prevent confusing duplicate announcements.
