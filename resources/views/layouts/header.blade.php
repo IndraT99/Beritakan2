@@ -15,15 +15,15 @@
     </nav>
     <ul class="nav align-items-center">
         <li class="px-sm-3 px-2">
-            <a href="#" id="gotoFullScreen" title="Fullscreen"><i class="fas fa-expand fs-2"></i></a>
+            <a href="#" id="gotoFullScreen" title="Fullscreen" aria-label="Toggle Fullscreen"><i class="fas fa-expand fs-2"></i></a>
         </li>
         <li class="px-xxl-3 px-2">
             @if(Auth::user()->dark_mode)
-                <a href="javascript:void(0)" data-turbo="false" title="Switch to Light mode">
+                <a href="javascript:void(0)" data-turbo="false" title="Switch to Light mode" aria-label="Switch to Light mode">
                     <i class="fa-solid fa-moon text-primary fs-2 apply-dark-mode"></i>
                 </a>
             @else
-                <a href="javascript:void(0)" data-turbo="false" title="Switch to Dark mode">
+                <a href="javascript:void(0)" data-turbo="false" title="Switch to Dark mode" aria-label="Switch to Dark mode">
                     <i class="fa-solid fa-sun text-primary fs-2 apply-dark-mode"></i></a>
             @endif
         </li>
