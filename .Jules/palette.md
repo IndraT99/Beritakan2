@@ -1,0 +1,3 @@
+## 2023-10-27 - Static Verification for Accessibility Attributes
+**Learning:** When making non-visual accessibility changes like adding `aria-label`s to existing elements, using Playwright to take screenshots is unnecessary and time-consuming since the changes are invisible. If testing them dynamically is blocked by complex environment constraints (like seeding), static verification via Python scripts is a faster, more reliable method.
+**Action:** Default to static script verification for purely semantic HTML changes (like ARIA attributes) instead of forcing full-stack UI rendering and screenshotting, unless visual focus states or layout shifts are involved.
