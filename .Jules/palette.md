@@ -1,0 +1,3 @@
+## 2026-06-07 - Add accessibility attributes to nested link in icon-only toggles
+**Learning:** In Blade templates, when using a nested `<a>` inside an icon-only `<button>` to trigger toggles (like dropdowns), screen readers may announce the button but also stop at the empty link, or vice-versa, causing confusion or duplicate/empty stops. The button itself acts as the semantic trigger.
+**Action:** Apply `aria-hidden="true"` and `tabindex="-1"` to the nested inner `<a>` element (and ensure the button has a descriptive `aria-label`) to hide it from screen readers and prevent it from receiving duplicate tab focus, while maintaining the intended visual/structural design.
