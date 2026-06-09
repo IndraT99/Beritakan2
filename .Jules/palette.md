@@ -1,0 +1,3 @@
+## 2024-06-25 - ARIA Labels for Icon-Only Navigation Toggles
+**Learning:** In responsive Laravel Blade templates using Bootstrap offcanvas features (like `<a data-bs-toggle="offcanvas">...<i class="fa-bars"></i></a>`), it's common to find icon-only toggle links and buttons for things like menus and searches without proper ARIA labels.
+**Action:** When working on navigation or header components, always check interactive icon-only elements (like hamburger menus or magnifying glasses) to ensure they have an appropriate `aria-label` attribute using the app's translation strings (e.g., `aria-label="{{ __('messages.menu.menu') }}"`) to keep them screen reader friendly and correctly localized.
