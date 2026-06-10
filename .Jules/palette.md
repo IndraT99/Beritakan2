@@ -1,0 +1,1 @@
+## 2026-06-10 - Prevent Duplicate Focus Stops on Nested Links in Buttons\n**Learning:** When an icon-only `<a>` tag is nested inside a `<button>` (like dropdown toggles), screen readers can announce it twice or create empty focus stops. \n**Action:** Add `aria-hidden="true"` and `tabindex="-1"` to the inner `<a>` tag, and add an `aria-label` to the outer `<button>`.
