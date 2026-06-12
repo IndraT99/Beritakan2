@@ -1,0 +1,3 @@
+## 2024-06-12 - Handling `<a>` nested inside `<button>` for icon-only toggles
+**Learning:** In Bootstrap Blade templates, a common pattern is to nest an `<a>` inside a `<button>` (e.g., `<button aria-label="Search"><a href="javascript:void(0)"><i class="fa-solid..."></i></a></button>`). Applying the `aria-label` solely to the button leaves the inner `<a>` active, causing duplicate focus stops and empty link announcements for screen readers.
+**Action:** When fixing accessibility for icon-only toggles where `<a>` is nested inside `<button>`, apply `aria-hidden="true"` and `tabindex="-1"` to the inner `<a>` to prevent screen reader redundancy, while placing the `aria-label` on the parent `<button>` or `<a>` toggle respectively.
