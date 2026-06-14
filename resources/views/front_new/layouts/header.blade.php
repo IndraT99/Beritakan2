@@ -95,9 +95,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
+                        <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button" aria-label="{{ __('messages.search') }}"
                                 id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
+                            <a href="javascript:void(0)" aria-hidden="true" tabindex="-1"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
                         </button>
                         <div class="dropdown-menu mobile-search">
                             <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -112,7 +112,7 @@
                             </form>
                         </div>
                         <div class="offcanvas-toggle d-lg-none d-block">
-                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
+                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle" aria-label="{{ __('messages.menu.menu') }}"
                                aria-controls="offcanvasToggle">
                                 <i class="fa-solid fa-bars "></i>
                             </a>
@@ -120,7 +120,7 @@
                                  id="offcanvasToggle" aria-labelledby="offcanvasToggleLabel">
                                 <div class="offcanvas-content m-0">
                                     <div class="text-end">
-                                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
+                                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle" aria-label="{{ __('messages.menu.menu') }}"
                                            aria-controls="offcanvasToggle">
                                             <i class="fa fa-close text-black fs-5 m-2 me-3"></i>
                                         </a>
@@ -488,9 +488,9 @@
             </div>
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
-                    <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
+                    <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button" aria-label="{{ __('messages.search') }}"
                             id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
+                        <a href="javascript:void(0)" aria-hidden="true" tabindex="-1"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
                     </button>
                     <div class="dropdown-menu">
                         <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -504,7 +504,7 @@
                             </div>
                         </form>
                     </div>
-                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-label="{{ __('messages.menu.menu') }}"
                        aria-controls="offcanvasExample">
                         <i class="fa-solid fa-bars  fs-20"></i>
                     </a>
