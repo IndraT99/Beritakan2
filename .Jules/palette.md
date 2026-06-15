@@ -1,0 +1,3 @@
+## 2026-06-15 - Prevent Duplicate Focus on Nested Interactive Elements
+**Learning:** When using visual frameworks like Bootstrap, interactive elements like dropdown links are sometimes wrapped in interactive toggles to manage dropdown state without navigation. This structure creates duplicate tab stops and confusing, redundant announcements for screen readers if both elements are left accessible.
+**Action:** Add aria-label to the parent button to provide context, and add tabindex=-1 and aria-hidden=true to the nested link to remove it from the accessibility tree and tab order, preventing double-focus issues.
