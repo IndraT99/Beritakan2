@@ -1,0 +1,3 @@
+## 2024-05-18 - ARIA Labels for Icon-Only Navigation Buttons
+**Learning:** Icon-only navigation buttons in the header (like search, hamburger menu, and close icons) were using standalone `<a>` tags with `javascript:void(0)` or `#` but lacked `aria-label` attributes, making them completely inaccessible and unannounced to screen reader users. The visual context of the icon alone is insufficient.
+**Action:** When creating standalone interactive icon-only links (e.g., `<a href='#'><i class='fa-solid...'></i></a>`), always apply the `aria-label` attribute directly to the `<a>` tag, utilizing existing translation files (e.g., `__('messages.search')`) to ensure proper localization and screen reader support.
