@@ -15,7 +15,7 @@
     </nav>
     <ul class="nav align-items-center">
         <li class="px-sm-3 px-2">
-            <a href="#" id="gotoFullScreen" title="Fullscreen"><i class="fas fa-expand fs-2"></i></a>
+            <a href="#" id="gotoFullScreen" title="Fullscreen" aria-label="Fullscreen"><i class="fas fa-expand fs-2"></i></a>
         </li>
         <li class="px-xxl-3 px-2">
             @if(Auth::user()->dark_mode)
