@@ -16,15 +16,15 @@
                     </div>
                     <div class="col-xl-4 col-lg-4 br-gray py-1 d-lg-block d-none ">
                         <div class="social-icon d-flex justify-content-around ">
-                            <a href="{{$settings['facebook_url']}}" target="_blank"> <i class="fa-brands fa-facebook fa-lg" style="color: #1c5bca;"></i>
+                            <a href="{{$settings['facebook_url']}}" target="_blank" aria-label="Facebook"> <i class="fa-brands fa-facebook fa-lg" style="color: #1c5bca;"></i>
                             </a>
-                            <a href="{{$settings['twitter_url']}}" target="_blank"> 
+                            <a href="{{$settings['twitter_url']}}" target="_blank" aria-label="Twitter">
                                 <i class="fa-brands fa-twitter fa-lg" style="color: #54d3f2;"></i></a>
-                            <a href="{{$settings['linkedin_url']}}" target="_blank"> 
+                            <a href="{{$settings['linkedin_url']}}" target="_blank" aria-label="LinkedIn">
                                 <i class="fa-brands fa-linkedin fa-lg" style="color: #1e77ae;"></i></a>
-                            <a href="{{$settings['pinterest_url']}}" target="_blank"> 
+                            <a href="{{$settings['pinterest_url']}}" target="_blank" aria-label="Pinterest">
                                 <i class="fa-brands fa-pinterest fa-lg" style="color: #eb0a0a;"></i></a>
-                            <a href="{{$settings['instagram_url']}}" target="_blank"> 
+                            <a href="{{$settings['instagram_url']}}" target="_blank" aria-label="Instagram">
                                 <i class="fa-brands fa-instagram fa-lg" style="color: #ff14eb;"></i></a>
                         </div>
                     </div>
@@ -96,8 +96,8 @@
                             </ul>
                         </div>
                         <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                            <a href="javascript:void(0)" aria-hidden="true" tabindex="-1"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
                         </button>
                         <div class="dropdown-menu mobile-search">
                             <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -113,7 +113,7 @@
                         </div>
                         <div class="offcanvas-toggle d-lg-none d-block">
                             <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                               aria-controls="offcanvasToggle">
+                               aria-controls="offcanvasToggle" aria-label="{{ __('messages.menu.menu') }}">
                                 <i class="fa-solid fa-bars "></i>
                             </a>
                             <div class="offcanvas-wrapper offcanvas-wrapper-start" tabindex="-1"
@@ -121,7 +121,7 @@
                                 <div class="offcanvas-content m-0">
                                     <div class="text-end">
                                         <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                                           aria-controls="offcanvasToggle">
+                                           aria-controls="offcanvasToggle" aria-label="{{ __('messages.common.close') }}">
                                             <i class="fa fa-close text-black fs-5 m-2 me-3"></i>
                                         </a>
                                     </div>
@@ -156,7 +156,7 @@
                                                     {!! ($navigation->navigationable->name) ? $navigation->navigationable->name :                                                                      $navigation->navigationable->title !!}
                                                 </a>
                                                 @if(($langId ||  $navigation->navigationable_type== \App\Models\Menu::class )&& $isSubNav)
-                                                    <a href="#" class="p-0" data-turbo="false"><i
+                                                    <a href="#" class="p-0" data-turbo="false" aria-label="{{ __('messages.menu.menu') }} expand"><i
                                                                 class="fa fa-plus"></i></a>
                                                 @endif
                                                 @if( $langId || $navigation->navigationable_type ==
@@ -202,7 +202,7 @@
                                                class="fs-14 fw-6 {{ 'Pages' == ucfirst(last(request()->segments())) ? 'active': '' }}">
                                                 {{ __('messages.pages') }}
                                             </a>
-                                            <a href="#" class="p-0" data-turbo="false><i class=" fa fa-plus"></i></a>
+                                            <a href="#" class="p-0" data-turbo="false" aria-label="{{ __('messages.menu.menu') }} expand"><i class="fa fa-plus"></i></a>
                                         @endif
                                         <div class="content">
                                             @foreach($nav['pages'] as $page)
@@ -220,7 +220,7 @@
                                             <a href="javascript:void(0)" class="fs-14 fw-6">
                                                 {{ getLogInUser()->last_name }}
                                             </a>
-                                            <a href="#" class="p-0" data-turbo="false><i class=" fa fa-plus"></i></a>
+                                            <a href="#" class="p-0" data-turbo="false" aria-label="{{ __('messages.menu.menu') }} expand"><i class="fa fa-plus"></i></a>
                                             <div class="content">
                                                 <li>
                                                     <a href="{{ route('admin.dashboard') }}" class="fs-14 fw-6"
@@ -361,7 +361,7 @@
                         </li>
                         @if($nav['navigationsCount'] >= 6)
                             <li class="nav-item dropdown">
-                                <a class="nav-link" aria-current="page" href="#">
+                                <a class="nav-link" aria-current="page" href="#" aria-label="More">
                                     <i class="fa-solid fa-ellipsis "></i>
                                 </a>
                                 <ul class="dropdown-nav ps-0">
@@ -489,8 +489,8 @@
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
                     <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                        <a href="javascript:void(0)" aria-hidden="true" tabindex="-1"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
                     </button>
                     <div class="dropdown-menu">
                         <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -505,7 +505,7 @@
                         </form>
                     </div>
                     <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                       aria-controls="offcanvasExample">
+                       aria-controls="offcanvasExample" aria-label="{{ __('messages.menu.menu') }}">
                         <i class="fa-solid fa-bars  fs-20"></i>
                     </a>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
@@ -543,21 +543,21 @@
                                 </div>
                             </div>
                             <div class="social-icon d-flex  mt-4 flex-wrap">
-                                <a href="{{$settings['facebook_url']}}" target="_blank"> <i
+                                <a href="{{$settings['facebook_url']}}" target="_blank" aria-label="Facebook"> <i
                                             class="fa-brands fa-facebook-f text-gray fs-18 me-3"></i> </a>
-                                <a href="{{$settings['twitter_url']}}" target="_blank"> <i
+                                <a href="{{$settings['twitter_url']}}" target="_blank" aria-label="Twitter"> <i
                                             class="fa-brands fa-twitter text-gray fs-18 me-3"></i> </a>
-                                <a href="{{$settings['linkedin_url']}}" target="_blank"> <i
+                                <a href="{{$settings['linkedin_url']}}" target="_blank" aria-label="LinkedIn"> <i
                                             class="fa-brands fa-linkedin-in  text-gray fs-18 me-3"></i></a>
-                                <a href="{{$settings['pinterest_url']}}" target="_blank"> <i
+                                <a href="{{$settings['pinterest_url']}}" target="_blank" aria-label="Pinterest"> <i
                                             class="fa-brands fa-pinterest text-gray fs-18 me-3"></i></a>
-                                <a href="{{$settings['instagram_url']}}" target="_blank"> <i
+                                <a href="{{$settings['instagram_url']}}" target="_blank" aria-label="Instagram"> <i
                                             class="fa-brands fa-instagram  text-gray fs-18 me-3"></i></a>
-                                <a href="{{$settings['vk_url']}}" target="_blank"> <i
+                                <a href="{{$settings['vk_url']}}" target="_blank" aria-label="VK"> <i
                                             class="fa-brands fa-vk text-gray fs-18 me-3"></i></a>
-                                <a href="{{$settings['telegram_url']}}" target="_blank"> <i
+                                <a href="{{$settings['telegram_url']}}" target="_blank" aria-label="Telegram"> <i
                                             class="fa-brands fa-telegram text-gray fs-18 me-3"></i></a>
-                                <a href="{{$settings['youtube_url']}}" target="_blank"> <i
+                                <a href="{{$settings['youtube_url']}}" target="_blank" aria-label="YouTube"> <i
                                             class="fa-brands fa-youtube text-gray fs-18 "></i></a>
                             </div>
                         </div>
