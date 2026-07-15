@@ -1,0 +1,3 @@
+## 2024-05-18 - Prevent duplicate focus stops on nested interactive elements
+**Learning:** In Bootstrap dropdown components or similar custom UI elements, it is common to nest an `<a>` element inside a `<button>` tag purely for styling or icon rendering purposes. This creates an accessibility issue where screen readers announce duplicate or empty focus stops because both the parent `<button>` and child `<a>` are interactive.
+**Action:** When adding ARIA labels to the parent `<button>`, apply `aria-hidden="true"` and `tabindex="-1"` to the inner `<a>` to hide it from screen readers and remove it from the focus order.
