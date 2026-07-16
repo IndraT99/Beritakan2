@@ -1,0 +1,3 @@
+## 2026-07-16 - Accessible Icon-Only Buttons and Nested Links
+**Learning:** In Bootstrap dropdowns/toggles where an `<a>` is nested inside a `<button>`, placing `aria-label` on the parent `<button>` while adding `aria-hidden="true"` and `tabindex="-1"` to the inner `<a>` prevents screen readers from announcing duplicate, empty interactive elements. Standalone icon links (`<a href="#">...</a>`) without text need the `aria-label` directly on the `<a>` tag, not on the `<i>` icon.
+**Action:** When auditing mobile menus and search toggles, look for nested interactive elements and ensure focus stops only on the actionable wrapper with proper context, while removing visual-only children from the accessibility tree.
