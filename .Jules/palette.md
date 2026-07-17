@@ -1,0 +1,3 @@
+## 2023-07-17 - Icon-only Anchor Accessibility in Headers
+**Learning:** When dealing with icon-only toggle buttons in Blade templates where an `<a>` tag is inexplicably nested inside a `<button>` or functioning as a standalone toggle, applying `aria-hidden="true"` and `tabindex="-1"` to the nested inner `<a>` is critical to prevent screen readers from reading empty links or getting duplicate focus stops, while placing the `aria-label` directly on the parent interactive element.
+**Action:** Audit and update all header mobile/desktop menu and search toggles to follow this pattern consistently, and fix any related HTML syntax errors (e.g. missing quotes in `data-turbo`).
