@@ -9,8 +9,8 @@
             </div>
             <span class="text-gray-900 fs-4">{{ (strlen(getAppName()) > 12 ) ? substr(getAppName(), 0,12).'...' : getAppName() }}</span>
         </a>
-        <button type="button" class="btn px-0 aside-menu-container__aside-menubar d-lg-block d-none sidebar-btn">
-            <i class="fa-solid fa-bars fs-1"></i>
+        <button type="button" class="btn px-0 aside-menu-container__aside-menubar d-lg-block d-none sidebar-btn" aria-label="{{ __('messages.menu.menu') }}">
+            <i class="fa-solid fa-bars fs-1" aria-hidden="true" tabindex="-1"></i>
         </button>
     </div>
     <form class="d-flex position-relative aside-menu-container__aside-search search-control py-3 mt-1">
