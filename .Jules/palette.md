@@ -1,0 +1,3 @@
+## 2026-08-01 - Add ARIA Labels to Header Toggles
+**Learning:** When addressing accessibility for icon-only toggles in Blade templates where an `<a>` tag is nested inside a `<button>`, it's critical to place the `aria-label` directly on the parent `<button>` and apply `aria-hidden="true"` and `tabindex="-1"` to the inner `<a>`. This prevents screen readers from duplicating focus stops or announcing empty content.
+**Action:** Always inspect the nested structure of interactive elements to ensure ARIA attributes are placed on the interactive container, silencing any non-semantic, purely decorative descendants.
