@@ -1,0 +1,3 @@
+## 2024-05-19 - Accessibility for Icon-only Buttons
+**Learning:** Found several icon-only search and menu buttons (e.g. magnifying glass, hamburger menu, delete buttons) that are missing ARIA labels, making them inaccessible to screen readers. For toggles where an `<a>` is inside a `<button>`, `aria-label` needs to go on the button, while the inner link needs `aria-hidden="true"` and `tabindex="-1"`. Standalone inner links that act as buttons need ARIA labels too.
+**Action:** When working on navigation or icon-only actions, systematically add ARIA labels. I will improve the search toggles and mobile menu toggles in the frontend layout header.
