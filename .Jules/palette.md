@@ -1,0 +1,3 @@
+## 2024-05-18 - ARIA labels for nested button-link toggles vs standalone links
+**Learning:** When adding `aria-label` to icon-only toggles in Blade templates where an `<a>` tag is incorrectly nested inside a `<button>`, placing the `aria-label` on the parent `<button>` is correct, but screen readers may still read an empty/duplicate focus stop for the inner `<a>` if it isn't hidden.
+**Action:** Always apply `aria-hidden="true"` and `tabindex="-1"` to the inner `<a>` when nested in a `<button>` to prevent duplicate focus stops. For standalone interactive links (`<a href='#'>`), apply the `aria-label` directly to the `<a>` tag without hiding it from screen readers, as this would make the toggle completely inaccessible.
