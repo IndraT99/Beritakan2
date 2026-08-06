@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility improvements for icon-only toggles
+**Learning:** Icon-only toggle links inside buttons create duplicate and empty focus stops for screen readers if they are not hidden and un-focusable. Also, standalone icon-only links should have `aria-label` applied directly to the anchor tag.
+**Action:** When fixing accessibility for icon-only toggles where an `<a>` is nested inside a `<button>`, apply `aria-hidden="true"` and `tabindex="-1"` to the inner `<a>` to remove it from focus/screen readers, and add the `aria-label` directly on the parent `<button>`. For standalone icon-only `<a>` tags, just add the `aria-label` directly to the `<a>`.
