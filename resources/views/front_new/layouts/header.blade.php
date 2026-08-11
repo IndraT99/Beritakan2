@@ -96,8 +96,8 @@
                             </ul>
                         </div>
                         <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
+                                id="dropdownSearchMobile" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                            <i class="fa-solid fa-magnifying-glass fs-15"></i>
                         </button>
                         <div class="dropdown-menu mobile-search">
                             <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -105,7 +105,7 @@
                                     <input type="text" name="search" id="search" placeholder="Search..."
                                            class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                            value="">
-                                    <button type="submit" class="search-submit custom-submit search-input">
+                                    <button type="submit" class="search-submit custom-submit search-input" aria-label="{{ __('messages.search') }}">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
@@ -156,7 +156,7 @@
                                                     {!! ($navigation->navigationable->name) ? $navigation->navigationable->name :                                                                      $navigation->navigationable->title !!}
                                                 </a>
                                                 @if(($langId ||  $navigation->navigationable_type== \App\Models\Menu::class )&& $isSubNav)
-                                                    <a href="#" class="p-0" data-turbo="false"><i
+                                                    <a href="#" class="p-0" data-turbo="false" aria-label="{{ __('messages.menu.menu') }}"><i
                                                                 class="fa fa-plus"></i></a>
                                                 @endif
                                                 @if( $langId || $navigation->navigationable_type ==
@@ -202,7 +202,7 @@
                                                class="fs-14 fw-6 {{ 'Pages' == ucfirst(last(request()->segments())) ? 'active': '' }}">
                                                 {{ __('messages.pages') }}
                                             </a>
-                                            <a href="#" class="p-0" data-turbo="false><i class=" fa fa-plus"></i></a>
+                                            <a href="#" class="p-0" data-turbo="false" aria-label="{{ __('messages.menu.menu') }}"><i class=" fa fa-plus"></i></a>
                                         @endif
                                         <div class="content">
                                             @foreach($nav['pages'] as $page)
@@ -220,7 +220,7 @@
                                             <a href="javascript:void(0)" class="fs-14 fw-6">
                                                 {{ getLogInUser()->last_name }}
                                             </a>
-                                            <a href="#" class="p-0" data-turbo="false><i class=" fa fa-plus"></i></a>
+                                            <a href="#" class="p-0" data-turbo="false" aria-label="{{ __('messages.menu.menu') }}"><i class=" fa fa-plus"></i></a>
                                             <div class="content">
                                                 <li>
                                                     <a href="{{ route('admin.dashboard') }}" class="fs-14 fw-6"
@@ -489,8 +489,8 @@
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
                     <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
+                            id="dropdownSearchDesktop" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                        <i class="fa-solid fa-magnifying-glass fs-20 "></i>
                     </button>
                     <div class="dropdown-menu">
                         <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -498,7 +498,7 @@
                                 <input type="text" name="search" id="search" placeholder="{{__('messages.search')}}"
                                        class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                        value="">
-                                <button type="submit" class="search-submit custom-submit search-input">
+                                <button type="submit" class="search-submit custom-submit search-input" aria-label="{{ __('messages.search') }}">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
