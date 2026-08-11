@@ -1,0 +1,3 @@
+## 2024-08-11 - Removing redundant interactive elements in UI
+**Learning:** Adding `<a>` tags nested directly inside of `<button>`s creates invalid HTML and duplicate focus stops for screen readers, and multiple interactive elements nested break standard focus behaviors.
+**Action:** When adding labels to or updating icon-only toggles (`<button><a><i/></a></button>`), always strip the redundant `<a>` and put the icon/attributes directly on the `<button>` itself, and ensure `id` attributes (like `dropdownMenuButton1`) are unique per button rather than duplicate across the page to ensure accessibility is valid.
