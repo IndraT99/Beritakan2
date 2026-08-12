@@ -1,0 +1,3 @@
+## 2024-05-14 - Removed redundant nested <a> tags for button accessibility and ensured unique IDs
+**Learning:** In Blade templates, icon-only toggles using `<button>` should not contain a redundant `<a>` tag, as this creates duplicate focus stops and breaks the expected button behavior for screen readers. Buttons using Bootstrap dropdowns must also maintain unique `id` attributes to avoid conflicts and invalid HTML.
+**Action:** Remove redundant `<a>` tags inside `<button>` elements, apply `aria-label` directly to the `<button>` or standalone `<a>` using translated strings, and ensure all IDs (like dropdown toggles) are unique across the document.
