@@ -105,7 +105,7 @@
                                     <input type="text" name="search" id="search" placeholder="Search..."
                                            class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                            value="">
-                                    <button type="submit" class="search-submit custom-submit search-input">
+                                    <button type="submit" aria-label="{{ __('messages.search') }}" class="search-submit custom-submit search-input">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
@@ -113,7 +113,8 @@
                         </div>
                         <div class="offcanvas-toggle d-lg-none d-block">
                             <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                               aria-controls="offcanvasToggle">
+                               aria-controls="offcanvasToggle"
+                               aria-label="{{ __('messages.navigations.menu') }}">
                                 <i class="fa-solid fa-bars "></i>
                             </a>
                             <div class="offcanvas-wrapper offcanvas-wrapper-start" tabindex="-1"
@@ -121,7 +122,8 @@
                                 <div class="offcanvas-content m-0">
                                     <div class="text-end">
                                         <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                                           aria-controls="offcanvasToggle">
+                                           aria-controls="offcanvasToggle"
+                               aria-label="Close">
                                             <i class="fa fa-close text-black fs-5 m-2 me-3"></i>
                                         </a>
                                     </div>
@@ -498,14 +500,15 @@
                                 <input type="text" name="search" id="search" placeholder="{{__('messages.search')}}"
                                        class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                        value="">
-                                <button type="submit" class="search-submit custom-submit search-input">
+                                <button type="submit" aria-label="{{ __('messages.search') }}" class="search-submit custom-submit search-input">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
                         </form>
                     </div>
                     <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                       aria-controls="offcanvasExample">
+                       aria-controls="offcanvasExample"
+                       aria-label="{{ __('messages.navigations.menu') }}">
                         <i class="fa-solid fa-bars  fs-20"></i>
                     </a>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
