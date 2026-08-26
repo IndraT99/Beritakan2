@@ -1,0 +1,3 @@
+## 2024-08-26 - Bootstrap duplicate IDs and redundant nesting
+**Learning:** Bootstrap dropdown buttons sometimes copy/paste placeholder IDs (like `dropdownMenuButton1`) across multiple components in the same layout (e.g. mobile vs desktop header search buttons), breaking HTML validation and confusing screen readers. Also, wrapping interactive icons in redundant `<a>` tags inside `<button>`s creates duplicate focus stops and complex element hierarchies.
+**Action:** When adding ARIA labels to icon-only Bootstrap toggles, also ensure the element has a unique `id` and remove redundant nested interactive elements like `<a>` tags inside `<button>` to keep the focusable element clean.
