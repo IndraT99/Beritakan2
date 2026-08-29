@@ -1,6 +1,6 @@
 
 <header class='d-flex align-items-center justify-content-between flex-grow-1 header px-3 px-xl-0'>
-    <button type="button" class="btn px-0 aside-menu-container__aside-menubar d-block d-xl-none sidebar-btn">
+    <button type="button" class="btn px-0 aside-menu-container__aside-menubar d-block d-xl-none sidebar-btn" aria-label="{{ __('messages.menus') }}">
         <i class="fa-solid fa-bars fs-1"></i>
     </button>
     <nav class="navbar navbar-expand-xl navbar-light top-navbar d-xl-flex d-block px-3 px-xl-0 py-4 py-xl-0 "
@@ -103,7 +103,7 @@
             </div>
         </li>
         <li>
-            <button type="button" class="btn px-0 d-block d-xl-none header-btn pb-2">
+            <button type="button" class="btn px-0 d-block d-xl-none header-btn pb-2" aria-label="{{ __('messages.menus') }}">
                 <i class="fa-solid fa-bars fs-1"></i>
             </button>
         </li>
