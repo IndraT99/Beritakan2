@@ -1,0 +1,3 @@
+## 2024-05-24 - Interactive Element Nesting in Header Toggles
+**Learning:** Bootstrap dropdown toggles in this app's header frequently nest empty `<a>` tags inside `<button>` elements, creating redundant focus stops (double-tabbing) for keyboard users and confusing screen readers. Additionally, toggle `id`s are sometimes duplicated across mobile and desktop views, breaking ARIA relationships.
+**Action:** When fixing icon-only toggles, always remove nested `<a>` tags from `<button>`s, ensure `id`s on Bootstrap toggles (like `dropdownMenuButton1`) are unique, and use string-resolving translation keys (e.g., `messages.navigations.menu`) for ARIA labels to prevent 500 errors.
