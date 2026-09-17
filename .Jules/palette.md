@@ -1,0 +1,3 @@
+## 2024-05-17 - Header Accessibility Polish
+**Learning:** Duplicate IDs for Bootstrap dropdown components (e.g., using `dropdownMenuButton1` for multiple elements on the same page) break accessibility and proper aria-labelledby associations. In addition, standalone icon-only triggers (like mobile menus or search dropdowns) require explicit `aria-label`s. When turning a button into an icon trigger, do not nest `<a>` inside `<button>`.
+**Action:** Ensure all interactive elements have unique IDs and appropriate `aria-label`s using standard translation keys (e.g., `__('messages.search')`). Use only the necessary semantic tag (e.g., `<button>` or `<a>`) for interactive icon triggers.
