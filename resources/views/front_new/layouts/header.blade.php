@@ -32,11 +32,11 @@
                         @if(getLogInUser())
                             <div class="language-dropdown ms-2 d-none d-sm-block">
                                 <a class="nav-link p-0 fs-14 pe-3" href="javascript:void(0)"
-                                   id="dropdownMenuButton1">
+                                   id="dropdownLanguage">
                                     {{ getLogInUser()->last_name }}
                                     <i class="fa-solid fa-angle-down icon fs-12"></i>
                                 </a>
-                                <ul class="nav submenu language-menu" aria-labelledby="dropdownMenuButton1">
+                                <ul class="nav submenu language-menu" aria-labelledby="dropdownLanguage">
                                     <li class="nav-item languageSelection">
                                         @if(Auth::user()->hasRole('customer'))
                                             <a class="nav-link fs-14 d-flex align-items-center"
@@ -96,8 +96,8 @@
                             </ul>
                         </div>
                         <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
+                                id="dropdownSearchMobile" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                            <i class="fa-solid fa-magnifying-glass fs-15"></i>
                         </button>
                         <div class="dropdown-menu mobile-search">
                             <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -105,7 +105,7 @@
                                     <input type="text" name="search" id="search" placeholder="Search..."
                                            class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                            value="">
-                                    <button type="submit" class="search-submit custom-submit search-input">
+                                    <button type="submit" class="search-submit custom-submit search-input" aria-label="{{ __('messages.search') }}">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
@@ -489,8 +489,8 @@
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
                     <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
+                            id="dropdownSearchDesktop" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                        <i class="fa-solid fa-magnifying-glass fs-20 "></i>
                     </button>
                     <div class="dropdown-menu">
                         <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -498,7 +498,7 @@
                                 <input type="text" name="search" id="search" placeholder="{{__('messages.search')}}"
                                        class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                        value="">
-                                <button type="submit" class="search-submit custom-submit search-input">
+                                <button type="submit" class="search-submit custom-submit search-input" aria-label="{{ __('messages.search') }}">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>

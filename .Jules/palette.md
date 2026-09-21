@@ -1,0 +1,3 @@
+## 2024-05-18 - Header Dropdown Accessibility and Validation
+**Learning:** The application header pattern incorrectly reused the same `id="dropdownMenuButton1"` across multiple dropdown toggles (language, mobile search, desktop search), violating unique ID constraints and breaking assistive technologies. Additionally, icon-only search toggles nested an `<a>` tag inside a `<button>` and lacked `aria-label`s.
+**Action:** Ensure unique IDs for all interactive components (especially Bootstrap components relying on IDs for `aria-labelledby`). Remove redundant nested interactive elements and add descriptive `aria-label` attributes to all icon-only buttons to improve keyboard and screen reader accessibility.
