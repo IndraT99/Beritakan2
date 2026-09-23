@@ -1,0 +1,3 @@
+## 2024-05-20 - Adding ARIA labels to icon-only buttons
+**Learning:** Discovered that when using icon-only toggles (like the search and menu bars in the header), visual-only context isn't enough, and placing `<a>` inside `<button>` is an accessibility anti-pattern. Moreover, some nested arrays like `messages.menu` in translation can cause 500 errors if directly accessed via `__()` in Blade.
+**Action:** Use `messages.navigations.menu` string translation and apply the `aria-label` attribute directly to the correct semantic element (e.g., the `button` or `a` wrapper) while ensuring nested accessibility anti-patterns (e.g. `<a>` inside `<button>`) are fixed.
