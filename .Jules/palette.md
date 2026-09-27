@@ -1,0 +1,3 @@
+## 2024-09-27 - [Fix Duplicate IDs and Nested Links in Bootstrap Components]
+**Learning:** Bootstrap components frequently use generic default IDs (like `dropdownMenuButton1`). When these components are duplicated (e.g., for mobile vs. desktop views), the resulting duplicate IDs cause invalid HTML and accessibility issues. Additionally, nesting an `<a>` inside a `<button>` creates duplicate focus stops and invalid markup.
+**Action:** When adding or modifying Bootstrap dropdowns and toggles, always assign unique IDs. For icon-only button toggles, apply the `aria-label` directly to the `<button>` and remove any nested `<a>` tags to ensure a single, accessible focus stop.
