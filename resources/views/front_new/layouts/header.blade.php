@@ -31,12 +31,11 @@
                     <div class="col-xl-4 col-lg-4 col-sm-6  d-flex flex-wrap justify-content-sm-between justify-content-end align-items-center">
                         @if(getLogInUser())
                             <div class="language-dropdown ms-2 d-none d-sm-block">
-                                <a class="nav-link p-0 fs-14 pe-3" href="javascript:void(0)"
-                                   id="dropdownMenuButton1">
+                                <a class="nav-link p-0 fs-14 pe-3" href="javascript:void(0)" id="dropdownLanguageButton">
                                     {{ getLogInUser()->last_name }}
                                     <i class="fa-solid fa-angle-down icon fs-12"></i>
                                 </a>
-                                <ul class="nav submenu language-menu" aria-labelledby="dropdownMenuButton1">
+                                <ul class="nav submenu language-menu" aria-labelledby="dropdownLanguageButton">
                                     <li class="nav-item languageSelection">
                                         @if(Auth::user()->hasRole('customer'))
                                             <a class="nav-link fs-14 d-flex align-items-center"
@@ -95,9 +94,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
+                        <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button" aria-label="{{ __('messages.search') }}" id="dropdownMobileSearchButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-magnifying-glass fs-15"></i>
                         </button>
                         <div class="dropdown-menu mobile-search">
                             <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -488,9 +486,8 @@
             </div>
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
-                    <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
+                    <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button" aria-label="{{ __('messages.search') }}" id="dropdownDesktopSearchButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-magnifying-glass fs-20 "></i>
                     </button>
                     <div class="dropdown-menu">
                         <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -504,9 +501,8 @@
                             </div>
                         </form>
                     </div>
-                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                       aria-controls="offcanvasExample">
-                        <i class="fa-solid fa-bars  fs-20"></i>
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-label="{{ __('messages.menus') }}">
+                        <i class="fa-solid fa-bars fs-20"></i>
                     </a>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                          aria-labelledby="offcanvasExampleLabel">
