@@ -1,0 +1,3 @@
+## 2026-10-03 - Nested Links in Dropdown Toggles and ID Collisions
+**Learning:** Nesting `<a>` tags inside `<button>` elements for dropdown toggles creates duplicate focus stops and violates HTML validity, which is particularly confusing for screen readers. Furthermore, duplicating standard Bootstrap IDs (like `dropdownMenuButton1`) across the page breaks proper ARIA routing and keyboard navigation.
+**Action:** When fixing icon-only toggles, completely remove the redundant `<a>` tag, leaving the icon (e.g., `<i>`) directly inside the `<button>`, ensure the parent `<button>` has an appropriate `aria-label`, and verify that component IDs are unique across the document.
