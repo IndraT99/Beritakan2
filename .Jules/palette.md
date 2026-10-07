@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility for Icon-only toggles
+**Learning:** Nested `<a>` tags inside `<button>` elements for icon-only toggles create duplicate focus stops and accessibility issues. Standalone icon-only `<a>` toggles are also inaccessible without `aria-label`s. Translation keys might resolve to an array if not careful, causing 500 errors.
+**Action:** Remove redundant `<a>` tags inside `<button>` elements, apply `aria-label` directly to the parent `<button>` using safe translation strings (like `messages.menus`), and ensure unique IDs for dropdown toggles. If keeping standalone `<a>` tags, apply `aria-label` directly to them.
