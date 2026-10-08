@@ -96,8 +96,8 @@
                             </ul>
                         </div>
                         <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                            <i class="fa-solid fa-magnifying-glass fs-15"></i>
                         </button>
                         <div class="dropdown-menu mobile-search">
                             <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
@@ -489,8 +489,8 @@
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
                     <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
+                            id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                        <i class="fa-solid fa-magnifying-glass fs-20 "></i>
                     </button>
                     <div class="dropdown-menu">
                         <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
