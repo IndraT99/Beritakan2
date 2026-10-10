@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility improvements on icon-only menus
+**Learning:** It is crucial to add aria-labels to icon-only links and buttons (like hamburger menus) because screen readers have no contextual text to read. If a link with an icon has no text, the screen reader may read the link URL instead, resulting in a confusing user experience. Additionally, when fixing accessibility for standalone icon-only links (e.g., `<a href="#">...</a>`), the `aria-label` must be applied directly to the `<a>` tag rather than using `aria-hidden` on the link.
+**Action:** Always verify that buttons or links containing only an icon (especially for navigation or mobile menus) have an appropriate `aria-label` attribute describing their function.

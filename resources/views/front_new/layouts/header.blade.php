@@ -113,7 +113,7 @@
                         </div>
                         <div class="offcanvas-toggle d-lg-none d-block">
                             <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                               aria-controls="offcanvasToggle">
+                               aria-controls="offcanvasToggle" aria-label="{{ __('messages.navigations.menu') }}">
                                 <i class="fa-solid fa-bars "></i>
                             </a>
                             <div class="offcanvas-wrapper offcanvas-wrapper-start" tabindex="-1"
@@ -505,7 +505,7 @@
                         </form>
                     </div>
                     <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                       aria-controls="offcanvasExample">
+                       aria-controls="offcanvasExample" aria-label="{{ __('messages.navigations.menu') }}">
                         <i class="fa-solid fa-bars  fs-20"></i>
                     </a>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
