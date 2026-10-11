@@ -1,0 +1,3 @@
+## 2024-05-18 - Icon-only Toggles Missing ARIA labels
+**Learning:** Toggles such as hamburger menus and fullscreen buttons that only display icons often omit `aria-label`s, which hurts screen reader accessibility. Using the translation file (e.g. `__('messages.menu.menu')`) for ARIA labels ensures localization support.
+**Action:** Always add descriptive `aria-label`s to interactive elements lacking visible text, utilizing translation helpers where possible.
