@@ -1,6 +1,6 @@
 
 <header class='d-flex align-items-center justify-content-between flex-grow-1 header px-3 px-xl-0'>
-    <button type="button" class="btn px-0 aside-menu-container__aside-menubar d-block d-xl-none sidebar-btn">
+    <button type="button" aria-label="{{ __('messages.menu.menu') }}" class="btn px-0 aside-menu-container__aside-menubar d-block d-xl-none sidebar-btn">
         <i class="fa-solid fa-bars fs-1"></i>
     </button>
     <nav class="navbar navbar-expand-xl navbar-light top-navbar d-xl-flex d-block px-3 px-xl-0 py-4 py-xl-0 "
@@ -15,7 +15,7 @@
     </nav>
     <ul class="nav align-items-center">
         <li class="px-sm-3 px-2">
-            <a href="#" id="gotoFullScreen" title="Fullscreen"><i class="fas fa-expand fs-2"></i></a>
+            <a href="#" id="gotoFullScreen" title="Fullscreen" aria-label="Fullscreen"><i class="fas fa-expand fs-2"></i></a>
         </li>
         <li class="px-xxl-3 px-2">
             @if(Auth::user()->dark_mode)
@@ -103,7 +103,7 @@
             </div>
         </li>
         <li>
-            <button type="button" class="btn px-0 d-block d-xl-none header-btn pb-2">
+            <button type="button" aria-label="{{ __('messages.menu.menu') }}" class="btn px-0 d-block d-xl-none header-btn pb-2">
                 <i class="fa-solid fa-bars fs-1"></i>
             </button>
         </li>
