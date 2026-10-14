@@ -32,11 +32,11 @@
                         @if(getLogInUser())
                             <div class="language-dropdown ms-2 d-none d-sm-block">
                                 <a class="nav-link p-0 fs-14 pe-3" href="javascript:void(0)"
-                                   id="dropdownMenuButton1">
+                                   id="dropdownLanguageUser">
                                     {{ getLogInUser()->last_name }}
                                     <i class="fa-solid fa-angle-down icon fs-12"></i>
                                 </a>
-                                <ul class="nav submenu language-menu" aria-labelledby="dropdownMenuButton1">
+                                <ul class="nav submenu language-menu" aria-labelledby="dropdownLanguageUser">
                                     <li class="nav-item languageSelection">
                                         @if(Auth::user()->hasRole('customer'))
                                             <a class="nav-link fs-14 d-flex align-items-center"
@@ -96,16 +96,16 @@
                             </ul>
                         </div>
                         <button class="dropdown border-0 bg-transparent position-relative me-2 d-lg-none" type="button"
-                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-15"></i></a>
+                                id="dropdownSearchMobile" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                            <i class="fa-solid fa-magnifying-glass fs-15"></i>
                         </button>
-                        <div class="dropdown-menu mobile-search">
+                        <div class="dropdown-menu mobile-search" aria-labelledby="dropdownSearchMobile">
                             <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
                                 <div class="form-group border-0 search-input">
-                                    <input type="text" name="search" id="search" placeholder="Search..."
+                                    <input type="text" name="search" id="searchMobile" placeholder="Search..."
                                            class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                            value="">
-                                    <button type="submit" class="search-submit custom-submit search-input">
+                                    <button type="submit" class="search-submit custom-submit search-input" aria-label="{{ __('messages.search') }}">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
@@ -113,7 +113,7 @@
                         </div>
                         <div class="offcanvas-toggle d-lg-none d-block">
                             <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                               aria-controls="offcanvasToggle">
+                               aria-controls="offcanvasToggle" aria-label="{{ __('messages.navigations.menu') }}">
                                 <i class="fa-solid fa-bars "></i>
                             </a>
                             <div class="offcanvas-wrapper offcanvas-wrapper-start" tabindex="-1"
@@ -121,7 +121,7 @@
                                 <div class="offcanvas-content m-0">
                                     <div class="text-end">
                                         <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToggle"
-                                           aria-controls="offcanvasToggle">
+                                           aria-controls="offcanvasToggle" aria-label="{{ __('messages.common.closed') }}">
                                             <i class="fa fa-close text-black fs-5 m-2 me-3"></i>
                                         </a>
                                     </div>
@@ -489,29 +489,29 @@
             <div class="col-lg-1">
                 <div class="dropdown header-icon d-lg-flex  justify-content-end d-none position-relative">
                     <button class="dropdown-toggle border-0 bg-transparent position-relative me-4" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass fs-20 "></i></a>
+                            id="dropdownSearchDesktop" data-bs-toggle="dropdown" aria-expanded="false" aria-label="{{ __('messages.search') }}">
+                        <i class="fa-solid fa-magnifying-glass fs-20 "></i>
                     </button>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu" aria-labelledby="dropdownSearchDesktop">
                         <form action="{{ route('allPosts') }}" class="form search-form-box search-input">
                             <div class="form-group border-0 search-input">
-                                <input type="text" name="search" id="search" placeholder="{{__('messages.search')}}"
+                                <input type="text" name="search" id="searchDesktop" placeholder="{{__('messages.search')}}"
                                        class="form-control bg-light rt-search-control custom-input-control search-input mb-0"
                                        value="">
-                                <button type="submit" class="search-submit custom-submit search-input">
+                                <button type="submit" class="search-submit custom-submit search-input" aria-label="{{ __('messages.search') }}">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
                         </form>
                     </div>
                     <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                       aria-controls="offcanvasExample">
+                       aria-controls="offcanvasExample" aria-label="{{ __('messages.navigations.menu') }}">
                         <i class="fa-solid fa-bars  fs-20"></i>
                     </a>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                          aria-labelledby="offcanvasExampleLabel">
                         <a type="button" class="closebtn text-reset text-black" data-bs-dismiss="offcanvas"
-                           aria-label="Close">&times;</a>
+                           aria-label="{{ __('messages.common.closed') }}">&times;</a>
                         <div class="offcanvas-content pt-60">
                             <div class="news-logo mb-5">
                                 <a href="/">
