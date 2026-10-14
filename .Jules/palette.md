@@ -1,0 +1,3 @@
+## 2024-06-25 - Prevent Duplicate IDs and Avoid Nesting Links in Buttons
+**Learning:** In Blade templates, copy-pasting components like Bootstrap dropdowns can lead to duplicate `id`s (like `dropdownMenuButton1`), which breaks HTML validity and accessibility features like `aria-labelledby`. Additionally, nesting interactive elements like `<a>` inside `<button>` causes duplicate focus stops and screen reader confusion.
+**Action:** When adding or modifying interactive UI components, ensure that structural elements like `<button>` directly contain icon spans (`<i>`) without intermediate `<a>` tags, and manually verify that all `id`s remain unique across the document.
