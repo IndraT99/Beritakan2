@@ -1,0 +1,3 @@
+## 2026-10-16 - [Fix Duplicate Focus and Invalid HTML in Button Toggles]
+**Learning:** Found a pattern where interactive `<i>` icons inside toggle `<button>`s are unnecessarily wrapped in `<a>` tags. This creates duplicate focus stops and invalid HTML since interactive elements cannot be nested. Additionally, duplicate `id`s across mobile and desktop views on these buttons cause accessibility issues.
+**Action:** When fixing accessibility for icon-only toggles nested in an `<a>` tag inside a `<button>`, completely remove the redundant `<a>` tag to prevent duplicate focus stops, ensure the parent `<button>` has an appropriate `aria-label`, and update IDs to be unique across viewports.
