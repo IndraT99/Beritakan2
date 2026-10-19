@@ -1,0 +1,3 @@
+## 2023-10-19 - Accessible Icon-Only Toggles and Semantic ID Conflicts
+**Learning:** In Blade views with Bootstrap components, search and offcanvas toggles are often implemented as standalone icons or incorrectly nested as `<a>` inside `<button>`. This creates duplicate focus stops and lacks screen reader context. Furthermore, identical components duplicated for mobile and desktop viewports commonly reuse the same generic ID (e.g., `dropdownMenuButton1`), breaking HTML validity and ARIA referencing.
+**Action:** When fixing responsive dropdown toggles, un-nest redundant links inside buttons, ensure each viewport variation has a unique `id`, and provide a localized `aria-label` (e.g., `{{ __('messages.search') }}`) on the parent interactive element.
