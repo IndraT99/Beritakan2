@@ -1,0 +1,3 @@
+## 2024-05-15 - Nested Interactive Elements in Blade Templates
+**Learning:** Found instances where interactive `<a href="javascript:void(0)">` tags were nested inside `<button>` elements for icon-only toggles, creating duplicate tab stops and invalid HTML. Also observed duplicated IDs across responsive views.
+**Action:** Completely remove redundant `<a>` tags inside buttons, leaving the icon directly inside. Ensure parent `<button>` has appropriate `aria-label` using existing translations (e.g., `{{ __('messages.search') }}`), and use unique IDs for duplicated components across mobile/desktop views.
