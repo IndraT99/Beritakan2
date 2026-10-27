@@ -1,0 +1,3 @@
+## 2024-10-27 - Fixing Nested Interactive Elements in Headers
+**Learning:** Wrapping an `<i>` icon inside a redundant `<a href="javascript:void(0)">` inside a `<button>` creates duplicate tab stops and confuses screen readers. In addition, reusing generic `id`s like `dropdownMenuButton1` on multiple responsive elements breaks DOM uniqueness and ARIA associations.
+**Action:** Always place icons directly inside `<button>` elements without nested `<a>` tags. Ensure each button has a unique `id` and a descriptive `aria-label` utilizing existing localization strings (e.g., `__('messages.search')`).
