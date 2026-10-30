@@ -1,0 +1,3 @@
+## 2024-10-30 - [Nested Interactive Elements in Dropdown Toggles]
+**Learning:** Found a recurring pattern in the design system where icon-only dropdown toggles were implemented using `<a>` tags nested inside `<button>` elements. This creates invalid HTML and causes double focus stops for screen readers, confusing keyboard navigation. Additionally, toggle buttons shared non-unique IDs across viewports.
+**Action:** When working on icon-only toggles, verify they use a single semantic `<button>` with an appropriate `aria-label`, ensuring no nested interactive elements like `<a>` exist inside them, and that IDs are unique.
