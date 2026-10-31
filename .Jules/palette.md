@@ -1,0 +1,6 @@
+## 2024-11-20 - [ARIA Labels on Icon-only Offcanvas Toggle Menus]
+**Learning:** Found multiple instances where the application's mobile navigation menus, toggled by offcanvas buttons with a `fa-bars` icon, lack accessible names. Specifically, nested anchor tags within buttons or icon-only buttons need an `aria-label` to be announced properly by screen readers.
+**Action:** Consistently ensure that all mobile menu buttons, especially those using offcanvas layouts with `fa-bars`, have an `aria-label` (e.g., using translation keys like `messages.menu.menu` or hardcoded if necessary) and simplify HTML by removing unnecessary nested `<a>` elements inside `<button>` elements to avoid duplicate focus.
+## 2024-11-20 - [ARIA Labels on Icon-only Search Toggles]
+**Learning:** Icon-only toggle buttons, such as those used for displaying search dropdowns (e.g., `fa-magnifying-glass`), are common but often lack `aria-label`s. In addition, there is a recurring pattern of redundant anchor tags nested within `<button>` elements which can cause accessibility issues.
+**Action:** Remove the nested `<a>` elements and apply an `aria-label` (using translation keys when available, such as `messages.search`) directly on the `<button>` element to ensure it is properly announced by screen readers and avoids duplicate focus stops.
