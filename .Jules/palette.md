@@ -1,0 +1,3 @@
+## 2024-05-18 - Fix Duplicate Focus Stops and IDs in Header Dropdowns
+**Learning:** Header layout components contained icon-only toggle buttons wrapped in `<a>` tags inside `<button>` elements, creating duplicate tab stops for screen readers and lacking descriptive `aria-label`s. Furthermore, multiple dropdowns reused the generic Bootstrap ID `dropdownMenuButton1`, violating HTML validity and causing potential focus trapping or incorrect dropdown activation.
+**Action:** When fixing icon-only toggles in Blade templates, remove redundant inner `<a>` tags, apply `aria-label` directly to the `<button>`, and ensure all interactive elements have unique `id` attributes across responsive viewports.
