@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility improvements for icon-only toggles
+**Learning:** Icon-only menu and search toggle buttons in headers must include descriptive `aria-label`s, as visual context alone is insufficient for assistive technologies. Also, nested interactive elements like `<a>` inside `<button>` create duplicate focus stops.
+**Action:** When fixing accessibility for icon-only toggles, completely remove redundant nested `<a>` tags leaving the icon directly inside the `<button>`, ensure the parent `<button>` has an appropriate `aria-label`, and verify `id` attributes are unique across responsive viewports.
