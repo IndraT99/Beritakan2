@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility fixes for icon-only toggles
+**Learning:** Nesting `<a>` tags inside `<button>` elements for icon-only toggles (like search or menu icons) creates duplicate focus stops and invalid HTML, hurting keyboard accessibility. Visual-only icons lack context for screen readers. Duplicate IDs on responsive variants (mobile/desktop) cause accessibility and strict mode selection issues.
+**Action:** Remove redundant `<a>` tags inside `<button>`s, directly nest the icon. Always apply `aria-label` to the parent toggle using localized strings. Ensure `id` attributes are unique across the document for responsive variants.
